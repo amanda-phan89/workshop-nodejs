@@ -1,0 +1,29 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.galleries {
+  margin-bottom: 50px;
+}
+
+.crawl-button {
+  margin-bottom: 30px;
+}
+
+.loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('../css_images/page-loader.gif') 50% 50% no-repeat rgb(249,249,249);
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  display: none;
+}

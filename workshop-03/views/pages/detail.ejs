@@ -1,0 +1,25 @@
+<% layout('../layout') -%>
+
+<div class="row crawl-button">
+  <div class="col-sm-12"><a class="btn btn-primary" role="button" href="/">Back to list</a></div>
+</div>
+
+<% if(data.length > 0) { %>
+<div class="row galleries">
+    <a target="_blank" href="<%= data[0].source + data[0].filename %>">
+      <img class="img-thumbnail" src="<%= data[0].source + data[0].filename %>" width="300">
+      <div class="caption"><p>Original</p></div>
+    </a>
+</div>
+
+<% for(var i=0; i < data.length; i++) { %>
+<div class="row galleries">
+    <a target="_blank" href="<%= data[i].source + data[i].newFilename %>">
+      <img class="img-thumbnail" src="<%= data[i].source + data[i].newFilename %>" width="<%= data[i].width %>">
+      <div class="caption"><p>Width: <%= data[i].width %></p></div>
+    </a>
+</div>
+<% } %>
+<% } else { %>
+  <div class="row galleries">Error: Images not exist</div>
+<% } %>

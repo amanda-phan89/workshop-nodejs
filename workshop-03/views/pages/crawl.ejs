@@ -1,0 +1,14 @@
+<% layout('../layout') -%>
+<% script('https://code.jquery.com/jquery-3.2.1.min.js') -%>
+<% script('/js/script.js') -%>
+
+<div id="msgBox" class="alert"><ul></ul></div>
+<form id="downloadImg" action="/images" method="POST">
+  <div class="form-group">
+    <label for="url">Your url:</label>
+    <input type="text" class="form-control" name="url" id="url">
+    <div>Ex: http://www.planwallpaper.com</div>
+  </div>
+  <a class="btn btn-default" role="button" href="/">Back to list</a>
+  <button type="submit" class="btn btn-primary" id="submitDownloadImg">Submit</button>
+</form>

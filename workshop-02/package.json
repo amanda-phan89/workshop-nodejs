@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "gm": "^1.23.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.9.0"
+  }
+}

@@ -1,0 +1,24 @@
+<% layout('../layout') -%>
+
+<div class="row crawl-button">
+  <div class="col-sm-12"><a class="btn btn-primary" role="button" href="/crawl">Crawl new images</a></div>
+</div>
+<% if(data.length > 0) { %>
+<% for(var i=0; i < data.length; i++) { %>
+<% if (i % 3 === 0) { %>
+<div class="row galleries">
+<% } %>
+  <div class="col-sm-4 gallery">
+    <a href="<%= data[i].source %>">
+      <img class="img-thumbnail" src="<%= data[i].source + data[i].filename %>" width="<%= data[i].width %>">
+    </a>
+  </div>
+<% if ((i+1) % 3 === 0) { %>
+</div>
+<% } %>
+<% } %>
+<% } else { %>
+  <div class="row galleries">
+    <div class="col-sm-12">No images</div>
+  </div>
+<% } %>
